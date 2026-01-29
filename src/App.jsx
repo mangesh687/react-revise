@@ -13,6 +13,8 @@ import Counter from './Counter'
 import Toggle from './Toggle'
 import User1 from './User1'
 import User2 from './User2'
+import User3 from './User3'
+import Wrapper from './Wrapper'
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -84,7 +86,14 @@ function App() {
 <User2 name={obj1} />
 <hr />
 <User2 name={obj2} />
+<hr />
+<User3 name1={"mangesh pakhale cognizant"} />
+<User3 name1={"rohit cognizant"} />
+<User3 />
+<hr></hr>
+<Wrapper/>
   </>
+
   
  );
 }
