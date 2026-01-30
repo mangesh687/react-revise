@@ -15,6 +15,8 @@ import User1 from './User1'
 import User2 from './User2'
 import User3 from './User3'
 import Wrapper from './Wrapper'
+import InputField from './InputField'
+import ControlledComponent from './ControlledComponent'
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -92,6 +94,10 @@ function App() {
 <User3 />
 <hr></hr>
 <Wrapper/>
+<hr></hr>
+  <InputField/>
+  <hr></hr>
+  <ControlledComponent/>
   </>
 
   
