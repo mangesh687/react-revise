@@ -22,6 +22,7 @@ import HandleRadioButton from "./HandleRadioButton";
 import LoopInMap from "./LoopInMap";
 import ReuseComponent from "./ReuseComponent";
 import ClockTime from "./ClockTime";
+import NestedMap from "./NestedMap";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -45,6 +46,42 @@ function App() {
     { name: "Sanket", age: 28, city: "Banglore" },
     { name: "Amol", age: 29, city: "Chennai" },
   ];
+
+const obj4 = [
+  {
+    college: "COEP",
+    degree: "BE",
+    branch: "Computer",
+    students: [
+      { student: "Mangesh", age: 26 },
+      { student: "Rohit", age: 27 },
+      { student: "Sanket", age: 28 }
+    ]
+  },
+  {
+    college: "SPCE",
+    degree: "BE",
+    branch: "IT",
+    students: [
+      { student: "Amol", age: 29 },
+      { student: "Ajinkya", age: 30 },
+      { student: "Rahul", age: 25 }
+    ]
+  },
+  {
+    college: "DJSCE",
+    degree: "BE",
+    branch: "Mechanical",
+    students: [
+      { student: "Sachin", age: 24 },
+      { student: "Sujit", age: 23 },
+      { student: "Swapnil", age: 22 }
+    ]
+  }
+];
+
+
+
   const [color, setColor] = useState("green");
   return (
     <>
@@ -136,6 +173,10 @@ function App() {
         <option value="orange">Orange</option>
       </select>
       <ClockTime color={color} />
+      <hr />
+      <h1>Nested Map Function in React JS</h1>
+      <NestedMap college={obj4} />
+
     </>
   );
 }
