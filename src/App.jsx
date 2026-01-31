@@ -20,6 +20,7 @@ import ControlledComponent from './ControlledComponent'
 import HandleCheckbox from './HandleCheckbox'
 import HandleRadioButton from './HandleRadioButton'
 import LoopInMap from './LoopInMap'
+import ReuseComponent from './ReuseComponent'
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -36,6 +37,14 @@ function App() {
     age:27,
     city:"Mumbai"
   };
+
+  const obj3=[
+    {name:"Mangesh",age:26,city:"Pune"},
+    {name:"Rohit",age:27,city:"Mumbai"},
+    {name:"Sanket",age:28,city:"Banglore"},
+    {name:"Amol",age:29,city:"Chennai"}
+  ]
+  ;
 
  return(
   <>
@@ -106,6 +115,17 @@ function App() {
   <HandleRadioButton />
   <hr></hr>
   <LoopInMap />
+  <hr />
+  <h1>Reuse Component</h1>
+  {
+    obj3.map((u)=>(
+      <div key={u.name} style={{border:"2px solid", margin:"10px", padding:"10px"}}>
+        <ReuseComponent name1={u} />
+      </div>
+    ))
+  }
+
+  
   </>
 
   

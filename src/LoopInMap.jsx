@@ -61,6 +61,8 @@ function LoopInMap() {
           ))}
         </tbody>
       </table>
+      <hr />
+      
     </>
   );
 }
