@@ -17,6 +17,9 @@ import User3 from './User3'
 import Wrapper from './Wrapper'
 import InputField from './InputField'
 import ControlledComponent from './ControlledComponent'
+import HandleCheckbox from './HandleCheckbox'
+import HandleRadioButton from './HandleRadioButton'
+import LoopInMap from './LoopInMap'
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -98,6 +101,11 @@ function App() {
   <InputField/>
   <hr></hr>
   <ControlledComponent/>
+  <HandleCheckbox />
+  <hr></hr>
+  <HandleRadioButton />
+  <hr></hr>
+  <LoopInMap />
   </>
 
   
